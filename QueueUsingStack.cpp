@@ -48,7 +48,9 @@ int Queue::rear()
 
 void Queue::enqueue(int item)
 {
-	q.push(item);	
+	q.push(item);
+	if(q.size()==1)
+	front=q.top();	
 }
 int Queue::Front()
 {
@@ -62,7 +64,7 @@ int main()
 	q.enqueue(30);
 	q.enqueue(40);
 	cout<<"Size of queue is "<<q.size()<<endl;
-	cout<<"Element dequeued is "<<q.dequeue()<<endl;
+	
 	cout<<"Size of queue is "<<q.size()<<endl;
 	cout<<"Front element is "<<q.Front()<<endl;
 	cout<<"Rear element is "<<q.rear()<<endl;
